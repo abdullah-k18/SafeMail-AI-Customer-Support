@@ -13,7 +13,7 @@ const Profile = () => {
   const [profileImage, setProfileImage] = useState(null);
   const [error, setError] = useState('');
   const [imagePreview, setImagePreview] = useState(null);
-  const [successMessage, setSuccessMessage] = useState(''); // Added success message state
+  const [successMessage, setSuccessMessage] = useState('');
   const router = useRouter();
 
   const handleSave = async (e) => {
@@ -21,21 +21,21 @@ const Profile = () => {
 
     try {
       if (profileImage) {
-        const storageRef = ref(storage, `profile_images/${auth.currentUser.uid}`);
+        const storageRef = ref(storage, `https://firebasestorage.googleapis.com/v0/b/ai-customer-support-4254a.appspot.com/o/profile_images/${auth.currentUser.uid}`);
         await uploadBytes(storageRef, profileImage);
       }
 
       await setDoc(doc(db, 'users', auth.currentUser.uid), {
         firstName,
         lastName,
-        profileImageUrl: profileImage ? `profile_images/${auth.currentUser.uid}` : null
+        profileImageUrl: profileImage ? `https://firebasestorage.googleapis.com/v0/b/ai-customer-support-4254a.appspot.com/o/profile_images/${auth.currentUser.uid}` : null
       });
 
-      setSuccessMessage('Profile saved successfully!'); // Set success message
+      setSuccessMessage('Profile saved successfully!');
       setError('');
     } catch (error) {
       setError('Failed to save profile. Please try again.');
-      setSuccessMessage(''); // Clear success message on error
+      setSuccessMessage('');
     }
   };
 
@@ -96,7 +96,7 @@ const Profile = () => {
           />
 
           {error && <p className={styles.error}>{error}</p>}
-          {successMessage && <p className={styles.success}>{successMessage}</p>} {/* Display success message */}
+          {successMessage && <p className={styles.success}>{successMessage}</p>}
 
           <button type="submit" className={styles.button}>Save</button>
 

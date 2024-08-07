@@ -38,7 +38,7 @@ const Home = () => {
           console.error('Error fetching user data:', error);
         }
       } else {
-        router.push('/login'); 
+        router.push('/'); 
       }
     };
 
@@ -50,10 +50,16 @@ const Home = () => {
     setOverlayOpen(!overlayOpen);
   };
 
+  const handleHomeClick = () => {
+    router.push('/home')
+  };
+
   const handleProfileClick = () => {
+    router.push('/editProfile')
   };
 
   const handleRateClick = () => {
+    router.push('/feedback');
   };
 
   const handleLogoutClick = () => {
@@ -109,9 +115,15 @@ const Home = () => {
       <div className={`${styles.overlay} ${overlayOpen ? styles.open : ''}`} onClick={closeDrawer}></div>
       <div className={`${styles.drawer} ${drawerOpen ? styles.open : ''}`}>
         <div className={styles.drawerHeader}>MENU</div>
+        <hr></hr>
+        <button onClick={handleHomeClick}>Home</button>
+        <hr></hr>
         <button onClick={handleProfileClick}>Profile</button>
-        <button onClick={handleRateClick}>Rate</button>
+        <hr></hr>
+        <button onClick={handleRateClick}>Feedback</button>
+        <hr></hr>
         <button onClick={handleLogoutClick}>Logout</button>
+        <hr></hr>
       </div>
       {showLogoutDialog && (
         <div className={styles.logoutDialog}>

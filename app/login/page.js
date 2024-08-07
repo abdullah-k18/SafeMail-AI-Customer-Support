@@ -25,6 +25,14 @@ const Login = () => {
 
   return (
     <div className={styles.container}>
+      <header className={styles.header}>
+        <div className={styles.logo}>SafeMail</div>
+        <nav className={styles.nav}>
+          <a href="/" className={styles.navItem}>Home</a>
+          <a href="/#reviews" className={styles.navItem}>Reviews</a>
+          <a href="/#team" className={styles.navItem}>Our Team</a>
+        </nav>
+      </header>
       <h1 className={styles.title}>Login</h1>
       <form className={styles.form} onSubmit={handleLogin}>
         <label className={styles.label}>Email</label>

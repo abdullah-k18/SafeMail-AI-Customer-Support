@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       if (user) {
         router.push('/home');
       } else {
-        router.push('/login');
+        router.push('/');
       }
     });
 

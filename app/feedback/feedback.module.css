@@ -1,0 +1,241 @@
+.container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center; 
+  }
+  
+  .heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .ratingLabel {
+    margin-right: 10px;
+  }
+  
+  .star {
+    font-size: 24px;
+    cursor: pointer;
+    color: gray;
+  }
+  
+  .star.filled {
+    color: gold;
+  }
+  
+  .textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .error {
+    color: red;
+    margin-bottom: 20px;
+  }
+  
+  .success {
+    color: green;
+    margin-bottom: 20px;
+  }
+  
+  .submitButton {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0070f3;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .submitButton:hover {
+    background-color: #005bb5;
+  }
+  
+  .logoutDialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1000;
+  }
+  
+  .logoutDialog p {
+    margin-bottom: 10px;
+  }
+  
+  .logoutDialog button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .logoutDialog button:first-of-type {
+    background-color: #0070f3;
+    color: white;
+  }
+  
+  .logoutDialog button:first-of-type:hover {
+    background-color: #005bb5;
+  }
+  
+  .logoutDialog button:last-of-type {
+    background-color: #f0f0f0;
+  }
+  
+  .logoutDialog button:last-of-type:hover {
+    background-color: #ddd;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #c7c8c7;
+    position: relative;
+    width: 100%;
+  }
+  
+  .menuButton {
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .logo {
+    flex: 1;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .headerprofileImageContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .headerprofileImage {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .headerprofileImagePlaceholder {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+  }
+  
+  .overlay.open {
+    display: block;
+  }
+  
+  .drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #dbdcdc;
+    border-right: 1px solid #ccc; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .drawer.open {
+    transform: translateX(0); 
+  }
+  
+  
+  .drawerHeader {
+    background-color: #c7c8c7;
+    color: black;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    height: 90px;
+  }
+  
+  .drawer button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #dbdcdc;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  .drawer button:hover {
+    background-color: #f0f0f0;
+  }
+
+  .readOnlyField {
+    margin-bottom: 16px;
+  }
+  
+  .readOnlyLabel {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .readOnlyInput {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    cursor: not-allowed;
+  }
+  
