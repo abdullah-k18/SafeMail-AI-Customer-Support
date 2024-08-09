@@ -83,31 +83,27 @@ const Home = () => {
             <h2 className={styles.sectionTitle}>Our Team</h2>
             <div className={styles.teamContainer}>
               <div className={styles.teamCard}>
-                <img src="/johnDoe.jpg" alt="Nate" className={styles.teamImage} />
+                <img src="https://media.licdn.com/dms/image/D5603AQE_KNzf_aFGXg/profile-displayphoto-shrink_800_800/0/1708485647464?e=1728518400&v=beta&t=BDazDaX1tEKJd-E4_HkFOzyg4lEDoUtizyZ1n6obuRA" alt="Bhavana" className={styles.teamImage} />
                 <div className={styles.teamContent}>
-                  <h3>Nate</h3>
-                  <p>Developer</p>
+                  <h3>Bhavana Sree Naidu .Y</h3>
                 </div>
               </div>
               <div className={styles.teamCard}>
-                <img src="/janeSmith.jpg" alt="Bhavana" className={styles.teamImage} />
+                <img src="https://media.licdn.com/dms/image/D5603AQG99KQa_l60xw/profile-displayphoto-shrink_200_200/0/1721289753190?e=1728518400&v=beta&t=eIL4mRiTTmu7EJ9KU4gMe-mWBbf7-Ya9__WJg9DOmmc" alt="Sana" className={styles.teamImage} />
                 <div className={styles.teamContent}>
-                  <h3>Bhavana</h3>
-                  <p>Developer</p>
+                  <h3>Sana Ekram</h3>
                 </div>
               </div>
               <div className={styles.teamCard}>
-                <img src="/emilyJohnson.jpg" alt="Sana" className={styles.teamImage} />
+                <img src="https://media.licdn.com/dms/image/D4D03AQEAyrfoFRsCfA/profile-displayphoto-shrink_800_800/0/1705992358845?e=1728518400&v=beta&t=1WNAQyjsZ6rpztRLDzusDAtB91cYyuSvjNlGSPDOqsw" alt="Abdullah" className={styles.teamImage} />
                 <div className={styles.teamContent}>
-                  <h3>Sana</h3>
-                  <p>Developer</p>
+                  <h3>Abdullah Bin Altaf</h3>
                 </div>
               </div>
               <div className={styles.teamCard}>
-                <img src="/emilyJohnson.jpg" alt="Abdullah" className={styles.teamImage} />
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQEpJ5n7F3DMuw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1690056719269?e=1728518400&v=beta&t=EydZnOHDP5LXQNsD6I7HFjhkzyab_enCW116hKK4-sg" alt="Nate" className={styles.teamImage} />
                 <div className={styles.teamContent}>
-                  <h3>Abdullah</h3>
-                  <p>Developer</p>
+                  <h3>Nathaniel Rankine</h3>
                 </div>
               </div>
             </div>

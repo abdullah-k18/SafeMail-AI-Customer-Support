@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <title>Customer Support - SafeMail</title>
-        <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3076/3076314.png" type="image/x-icon" />
+        <link rel="shortcut icon" href="https://cdn3.iconfinder.com/data/icons/antivirus-internet-security-thick-colored-version/33/email_scanning-512.png" type="image/x-icon" />
       </head>
       <body className={inter.className}>
         <main>{children}</main>
