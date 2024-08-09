@@ -85,7 +85,7 @@ const Home = () => {
               <div className={styles.teamCard}>
                 <img src="https://media.licdn.com/dms/image/D5603AQE_KNzf_aFGXg/profile-displayphoto-shrink_800_800/0/1708485647464?e=1728518400&v=beta&t=BDazDaX1tEKJd-E4_HkFOzyg4lEDoUtizyZ1n6obuRA" alt="Bhavana" className={styles.teamImage} />
                 <div className={styles.teamContent}>
-                  <h3>Bhavana Sree Naidu .Y</h3>
+                  <h3>Bhavana Sree Naidu Yeluri</h3>
                 </div>
               </div>
               <div className={styles.teamCard}>
