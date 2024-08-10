@@ -77,6 +77,7 @@ const Home = () => {
                 <p>No reviews available.</p>
               )}
             </div>
+            <hr/>
           </section>
 
           <section id="team" className={`${styles.team} ${styles.fullHeight}`}>
