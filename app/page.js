@@ -81,7 +81,6 @@ const Home = () => {
             
           </section>
           <hr></hr>
-
           <section id="team" className={`${styles.team} ${styles.fullHeight}`}>
             <h2 className={styles.sectionTitle}>Our Team</h2>
             <div className={styles.teamContainer}>
@@ -115,7 +114,7 @@ const Home = () => {
       </div>
       <footer className={styles.footer}>
           <p>&copy; 2024 SafeMail. All rights reserved.</p>
-        </footer>
+      </footer>
     </div>
   );
 };

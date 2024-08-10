@@ -239,3 +239,8 @@
     cursor: not-allowed;
   }
   
+  .body {
+    background-color: #dbdcdc;
+    justify-content: center;
+    min-height: 90vh;
+  }

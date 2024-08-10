@@ -130,7 +130,7 @@ const Feedback = () => {
         <div className={styles.menuButton} onClick={toggleDrawer}>
           &#9776;
         </div>
-        <div className={styles.logo}>Welcome, {userData.firstName}</div>
+        <div className={styles.logo}>Your Feedback Matters</div>
         <div className={styles.headerprofileImageContainer}>
           {userData.profileImageUrl ? (
             <img src={userData.profileImageUrl} alt="Profile" className={styles.headerprofileImage} />
@@ -159,8 +159,8 @@ const Feedback = () => {
           <button onClick={cancelLogout}>Cancel</button>
         </div>
       )}
+      <div className={styles.body}>
       <div className={styles.container}>
-        <h1 className={styles.heading}>Your Feedback Matters</h1>
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.rating}>
             <span className={styles.ratingLabel}>Rating:</span>
@@ -185,6 +185,7 @@ const Feedback = () => {
           {success && <p className={styles.success}>{success}</p>}
           <button type="submit" className={styles.submitButton}>Submit</button>
         </form>
+      </div>
       </div>
     </>
   );

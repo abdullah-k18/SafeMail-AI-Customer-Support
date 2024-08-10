@@ -207,11 +207,12 @@ const Home = () => {
       <div className={styles.container}>
       <Box
       maxWidth="100vw"
-      maxHeight="100vh"
+      minHeight="90vh"
       display="flex"
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
+      backgroundColor="#dbdcdc"
       sx={{
         padding: 2,
       }}

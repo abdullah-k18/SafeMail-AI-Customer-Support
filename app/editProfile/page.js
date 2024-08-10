@@ -171,7 +171,7 @@ const EditProfile = () => {
         <div className={styles.menuButton} onClick={toggleDrawer}>
           &#9776;
         </div>
-        <div className={styles.logo}>Welcome, {userData.firstName}</div>
+        <div className={styles.logo}>Your Profile</div>
         <div className={styles.headerprofileImageContainer}>
           {userData.profileImageUrl ? (
             <img src={userData.profileImageUrl} alt="Profile" className={styles.headerprofileImage} />
