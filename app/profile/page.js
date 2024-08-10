@@ -21,7 +21,7 @@ const Profile = () => {
 
     try {
       if (profileImage) {
-        const storageRef = ref(storage, `https://firebasestorage.googleapis.com/v0/b/ai-customer-support-4254a.appspot.com/o/profile_images/${auth.currentUser.uid}`);
+        const storageRef = ref(storage, `profile_images/${auth.currentUser.uid}`);
         await uploadBytes(storageRef, profileImage);
       }
 
@@ -57,7 +57,7 @@ const Profile = () => {
   };
 
   return (
-    <body className={styles.body}>
+    <div className={styles.body}>
       <div className={styles.container}>
         <h1 className={styles.title}>Set Profile</h1>
 
@@ -109,7 +109,7 @@ const Profile = () => {
           </button>
         </form>
       </div>
-    </body>
+    </div>
   );
 };
 

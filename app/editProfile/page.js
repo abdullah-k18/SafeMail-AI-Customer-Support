@@ -138,7 +138,7 @@ const EditProfile = () => {
 
       let profileImageUrl = userData.profileImageUrl;
       if (profileImage) {
-        const imageRef = ref(storage, `profileImages/${auth.currentUser.uid}`);
+        const imageRef = ref(storage, `profile_images/${auth.currentUser.uid}`);
         await uploadBytes(imageRef, profileImage);
         profileImageUrl = await getDownloadURL(imageRef);
       }

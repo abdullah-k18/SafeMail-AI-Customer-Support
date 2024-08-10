@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import styles from './feedback.module.css';
-import { db, auth } from '../../firebase'; 
+import { db, auth, storage } from '../../firebase'; 
 import { collection, addDoc, doc, getDoc } from 'firebase/firestore';
+import { getDownloadURL, ref } from 'firebase/storage';
 import { useRouter } from 'next/navigation';
 
 const Feedback = () => {
@@ -15,7 +16,7 @@ const Feedback = () => {
     firstName: '',
     lastName: '',
     email: '',
-    profileImageUrl: ''
+    profileImageUrl: '',
   });
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [showLogoutDialog, setShowLogoutDialog] = useState(false);
@@ -25,13 +26,27 @@ const Feedback = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       if (auth.currentUser) {
-        const userDoc = await getDoc(doc(db, 'users', auth.currentUser.uid));
+        const userDocRef = doc(db, 'users', auth.currentUser.uid);
+          const userDoc = await getDoc(userDocRef);
+          const userData = userDoc.data();
         if (userDoc.exists()) {
-          setUserData(userDoc.data());
+          if (userData) {
+            let profileImageUrl = '';
+            if (userData.profileImageUrl) {
+              const imageRef = ref(storage, userData.profileImageUrl);
+              profileImageUrl = await getDownloadURL(imageRef);
+            }
+
+            setUserData({
+              firstName: userData.firstName || '',
+              lastName: userData.lastName || '',
+              profileImageUrl,
+            });
+          }
         }
+        
       }
     };
-
     fetchUserData();
   }, []);
 

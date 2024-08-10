@@ -37,7 +37,7 @@ const Home = () => {
   }, []);
 
   return (
-    <body className={styles.body}>
+    <div className={styles.body}>
       <div className={styles.container}>
         <header className={styles.header}>
           <div className={styles.logo}>SafeMail</div>
@@ -56,6 +56,7 @@ const Home = () => {
             <p className={styles.description}>Get to know what SafeMail is, by interacting with our AI Customer Support Chatbot.</p>
             <button className={styles.getStartedButton} onClick={handleSignupClick}>Get Started</button>
           </section>
+          <hr></hr>
 
           <section id="reviews" className={`${styles.reviews} ${styles.fullHeight}`}>
             <h2 className={styles.sectionTitle}>Reviews</h2>
@@ -78,6 +79,7 @@ const Home = () => {
               )}
             </div>
           </section>
+          <hr></hr>
 
           <section id="team" className={`${styles.team} ${styles.fullHeight}`}>
             <h2 className={styles.sectionTitle}>Our Team</h2>
@@ -109,12 +111,11 @@ const Home = () => {
             </div>
           </section>
         </main>
-
-        <footer className={styles.footer}>
+      </div>
+      <footer className={styles.footer}>
           <p>&copy; 2024 SafeMail. All rights reserved.</p>
         </footer>
-      </div>
-    </body>
+    </div>
   );
 };
 
