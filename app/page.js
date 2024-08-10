@@ -52,7 +52,7 @@ const Home = () => {
 
         <main className={styles.main}>
           <section id="home" className={`${styles.hero} ${styles.fullHeight}`}>
-            <h1 className={styles.title}>AI Customer Service for SafeMail</h1>
+            <h1 className={styles.title}>AI Customer Support for SafeMail</h1>
             <p className={styles.description}>Get to know what SafeMail is, by interacting with our AI Customer Support Chatbot.</p>
             <button className={styles.getStartedButton} onClick={handleSignupClick}>Get Started</button>
           </section>
