@@ -78,6 +78,7 @@ const Home = () => {
                 <p>No reviews available.</p>
               )}
             </div>
+            
           </section>
           <hr></hr>
 
